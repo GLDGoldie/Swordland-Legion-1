@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Swordland: STABLES team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600;800&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef0f3; --surface:#ffffff; --ink:#1d2430; --muted:#5b6575;
+  --line:#d3d8e0; --gold:#a87a12; --gold-soft:#f6ecd2; --link:#1f4f8a;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#151a22; --surface:#1e2530; --ink:#e7eaf0; --muted:#9aa4b4;
+    --line:#323b49; --gold:#e0b14a; --gold-soft:#2c2618; --link:#8db8ec;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151a22; --surface:#1e2530; --ink:#e7eaf0; --muted:#9aa4b4;
+  --line:#323b49; --gold:#e0b14a; --gold-soft:#2c2618; --link:#8db8ec;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:1.0625rem/1.55 "Alegreya Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main{max-width:46rem; margin:0 auto; padding:2.5rem 1.25rem 3rem}
+h1,h2{font-family:Alegreya, Georgia, "Times New Roman", serif; line-height:1.15}
+h1{font-size:2.4rem; font-weight:800; margin:0 0 .75rem; border-bottom:3px solid var(--gold); padding-bottom:.5rem}
+h2{font-size:1.45rem; font-weight:600; margin:2.25rem 0 .9rem}
+p{margin:0 0 1rem}
+strong{font-weight:700}
+.note{background:var(--gold-soft); border-left:4px solid var(--gold); padding:.8rem 1rem; border-radius:0 6px 6px 0}
+
+.teams{display:grid; gap:.75rem}
+.team{
+  display:block; text-decoration:none; color:inherit;
+  background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--gold);
+  border-radius:8px; padding:.95rem 1.1rem;
+}
+.team:hover,.team:focus-visible{border-color:var(--gold)}
+.team:focus-visible,.plan:focus-visible{outline:3px solid var(--link); outline-offset:2px}
+.team h3{margin:0 0 .3rem; font-family:Alegreya, Georgia, serif; font-size:1.25rem; font-weight:800; color:var(--link)}
+.team h3 span{color:var(--muted); font:500 .9rem "Alegreya Sans", sans-serif; margin-left:.4rem}
+.lead{font-weight:700; margin:0 0 .15rem}
+.members{margin:0 0 .45rem}
+.job{margin:0; color:var(--muted); font-size:.95rem}
+
+.subs{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:.9rem 1.1rem}
+.subs p{margin:0}
+
+.plans{display:grid; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); gap:.75rem}
+.plan{
+  display:block; text-decoration:none; color:inherit; border-radius:8px; padding:1rem 1.1rem;
+  background:var(--surface); border:1px solid var(--line);
+}
+.plan strong{display:block; font-family:Alegreya, Georgia, serif; font-size:1.2rem; color:var(--link)}
+.plan.blue{border-top:5px solid #3a6fd0}
+.plan.red{border-top:5px solid #c4473a}
+.plan span{color:var(--muted)}
+
+ul{margin:0; padding-left:1.2rem}
+li{margin:.3rem 0}
+
+.role{background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--gold); border-radius:8px; padding:.9rem 1.1rem; margin-bottom:.75rem}
+.role.joiner{border-left-color:var(--line)}
+.role h3{margin:0; font-family:Alegreya, Georgia, serif; font-size:1.25rem; font-weight:800}
+.role h3 span{color:var(--muted); font:500 .95rem "Alegreya Sans", sans-serif; margin-left:.4rem}
+.where{color:var(--muted); font-size:.95rem; margin:.15rem 0 .55rem}
+.role ol{margin:0; padding-left:1.3rem}
+.role li{margin:.25rem 0}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse; width:100%; background:var(--surface); border:1px solid var(--line); border-radius:8px}
+td{padding:.6rem .8rem; border-top:1px solid var(--line); vertical-align:top}
+tr:first-child td{border-top:0}
+td:first-child{font-weight:700; white-space:nowrap; color:var(--gold)}
+.map{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:.9rem 1.1rem; margin-bottom:.75rem}
+.map p:last-child{margin:0}
+footer{margin-top:2rem; color:var(--muted); font-size:.95rem}
+a{color:var(--link)}
+</style>
+</head>
+<body>
+<main>
+<h1>STABLES team</h1>
+<p>Your building is the <strong>Stables</strong>, the buff building at the bottom corner. 1,200 on capture, 240 a minute, and it halves the teleport cooldown for whoever holds it, so it is contested whichever colour we get. Capture at 0:00 and hold for the hour.</p>
+<p class="note"><strong>Your team, your call.</strong> The goal is the building. The roles and priorities below are a starting point, not orders. If the lead sees a better way to hold it, change the plan. Nobody outside the team needs to be asked.</p>
+<p><strong>Formations.</strong> Into a building or a city: your garrison formation. Into a rally: your attack-joiner formation. Gathering: five troops. Discuss the details with your team.</p>
+
+<h2>Roles</h2>
+<section class="role"><h3>Kronk Fil<span>Lead, striker</span></h3><p class="where">Battlefield: one screen from the Stables toward our spawn, never beside a teammate</p><ol><li>Decide for the team. Rally enemy cities standing within one screen of it</li><li>Reinforce Bahnie</li><li>Trains</li></ol></section>
+<section class="role"><h3>Bahnie<span>Anchor</span></h3><p class="where">Battlefield: one screen from the Stables toward our spawn, never beside a teammate</p><ol><li>Main march in the Stables from 0:00, defence lineup. Never teleport while it is in: teleporting pulls your troops out of it</li><li>Reinforce Kronk Fil</li><li>Trains</li></ol></section>
+<section class="role"><h3>Copascal<span>Looter</span></h3><p class="where">Battlefield: one screen from the Stables toward our spawn, never beside a teammate</p><ol><li>Every Baggage Train near the Stables (half the points of a flipped building, for whoever picks them up)</li><li>Undercellars, five troops a node (five empties a node, losing five costs nothing)</li><li>Join Kronk Fil’s rallies</li></ol></section>
+<section class="role joiner"><h3>Tanaris<span>Joiner</span></h3><p class="where">Safe zone, all hour</p><ol><li>Reinforce Bahnie</li><li>Reinforce the Stables, speedups on (free, one comes back every minute)</li><li>Join Kronk Fil’s rallies</li></ol></section>
+<section class="role joiner"><h3>Vivek<span>Joiner</span></h3><p class="where">Safe zone, all hour</p><ol><li>Reinforce Bahnie</li><li>Reinforce the Stables, speedups on</li><li>Join Kronk Fil’s rallies</li></ol></section>
+
+<p><strong>Rally timer.</strong> A one-minute rally leaves before a march from the safe zone can arrive. With your joiners in the safe zone, call a longer rally. One minute only when the joiners are within one screen.</p>
+
+<h2>Where</h2>
+<div class="map"><p><strong>If we are BLUE</strong> (our spawn on the left): the Stables is on <strong>their</strong> half, bottom corner, two screens from our Corner Abbey. We take it anyway. Park one screen from the Stables, next to the Corner Abbey team; the two teams cover each other.</p></div>
+<div class="map"><p><strong>If we are RED</strong> (our spawn on the right): the Stables is <strong>ours</strong>, bottom corner, one and a half screens from our Sanctum. Park one screen from it toward our spawn. Their Corner Abbey team is next door and wants it.</p></div>
+<p>Maps for both colours are in the whole plan: <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_blue.html">blue</a>, <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_red.html">red</a>.</p>
+
+<h2>Clock</h2>
+<div class="scroll"><table>
+<tr><td>0:00</td><td>Bahnie in. Tanaris and Vivek reinforce Bahnie, then the Stables. The whole Shrine team is here: five joiner marches into the Stables, Biscar, President Hades and Leeroy5 burning the enemy cities next to it. Kronk Fil calls the rallies.</td></tr>
+<tr><td>3:00</td><td>Hold. When the Stables is held and no enemy city stands next to it, Kronk Fil tells the Shrine team it is secure. Until then they stay. At 10:00 their marches leave.</td></tr>
+<tr><td>45:00</td><td>No extra building for this team.</td></tr>
+<tr><td>50:00</td><td>A flip after 57:00 cannot be undone and drops half the bank as trains. Behind: Kronk Fil joins the burst rallies the Shrine lead names. Bahnie stays in. Ahead: nobody moves.</td></tr>
+</table></div>
+
+<h2>If</h2>
+<ul>
+<li><strong>Stables lost:</strong> Copascal on the trains. Kronk Fil burns the enemy city standing next to it. Bahnie goes back in.</li>
+<li><strong>Lost twice:</strong> tell the alliance. Stay parked one screen away and go back in the moment their garrison leaves. Never pull a march out of another building for it: two buildings lost is the match.</li>
+<li><strong>Bahnie burned:</strong> Kronk Fil’s main march goes into the Stables until Bahnie is back. Burned means twelve minutes in spawn and the march leaves the building.</li>
+<li><strong>Rally coming:</strong> every free march into the building, speedups on; the garrison shrinks with every hit and a fresh march fills it back up. Nobody leaves it to counter-attack.</li>
+</ul>
+
+<footer>Whole plan: <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_blue.html">blue</a>, <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_red.html">red</a>. Teams: <a href="https://gldgoldie.github.io/Swordland-Legion-1/">index</a>.</footer>
+</main>
+</body>
+</html>
