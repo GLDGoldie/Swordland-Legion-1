@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GLD Swordland</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600;800&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef0f3; --surface:#ffffff; --ink:#1d2430; --muted:#5b6575;
+  --line:#d3d8e0; --gold:#a87a12; --gold-soft:#f6ecd2; --link:#1f4f8a;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#151a22; --surface:#1e2530; --ink:#e7eaf0; --muted:#9aa4b4;
+    --line:#323b49; --gold:#e0b14a; --gold-soft:#2c2618; --link:#8db8ec;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151a22; --surface:#1e2530; --ink:#e7eaf0; --muted:#9aa4b4;
+  --line:#323b49; --gold:#e0b14a; --gold-soft:#2c2618; --link:#8db8ec;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:1.0625rem/1.55 "Alegreya Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main{max-width:46rem; margin:0 auto; padding:2.5rem 1.25rem 3rem}
+h1,h2{font-family:Alegreya, Georgia, "Times New Roman", serif; line-height:1.15}
+h1{font-size:2.4rem; font-weight:800; margin:0 0 .75rem; border-bottom:3px solid var(--gold); padding-bottom:.5rem}
+h2{font-size:1.45rem; font-weight:600; margin:2.25rem 0 .9rem}
+p{margin:0 0 1rem}
+strong{font-weight:700}
+.note{background:var(--gold-soft); border-left:4px solid var(--gold); padding:.8rem 1rem; border-radius:0 6px 6px 0}
+
+.teams{display:grid; gap:.75rem}
+.team{
+  display:block; text-decoration:none; color:inherit;
+  background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--gold);
+  border-radius:8px; padding:.95rem 1.1rem;
+}
+.team:hover,.team:focus-visible{border-color:var(--gold)}
+.team:focus-visible,.plan:focus-visible{outline:3px solid var(--link); outline-offset:2px}
+.team h3{margin:0 0 .3rem; font-family:Alegreya, Georgia, serif; font-size:1.25rem; font-weight:800; color:var(--link)}
+.team h3 span{color:var(--muted); font:500 .9rem "Alegreya Sans", sans-serif; margin-left:.4rem}
+.lead{font-weight:700; margin:0 0 .15rem}
+.members{margin:0 0 .45rem}
+.job{margin:0; color:var(--muted); font-size:.95rem}
+
+.subs{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:.9rem 1.1rem}
+.subs p{margin:0}
+
+.plans{display:grid; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); gap:.75rem}
+.plan{
+  display:block; text-decoration:none; color:inherit; border-radius:8px; padding:1rem 1.1rem;
+  background:var(--surface); border:1px solid var(--line);
+}
+.plan strong{display:block; font-family:Alegreya, Georgia, serif; font-size:1.2rem; color:var(--link)}
+.plan.blue{border-top:5px solid #3a6fd0}
+.plan.red{border-top:5px solid #c4473a}
+.plan span{color:var(--muted)}
+
+ul{margin:0; padding-left:1.2rem}
+li{margin:.3rem 0}
+</style>
+</head>
+<body>
+<main>
+  <h1>GLD Swordland</h1>
+  <p>Five teams, one building each, a lead who decides. Find your name below, then open your team’s page. It has your building, your marches, the map for both colours, your hour and what to do when it goes wrong.</p>
+  <p class="note"><strong>Your team, your call.</strong> Each team has a building to hold and a lead who decides. The pages give roles and priorities as a starting point. Change the plan if your team sees a better way to reach the goal.</p>
+
+  <h2>Your team</h2>
+  <div class="teams">
+    <a class="team" href="https://marsmankingshot.github.io/gld-hive-2408/swordland_team_shrine.html">
+      <h3>Shrine team <span>9 players</span></h3>
+      <p class="lead">Lead Dark Rad.</p>
+      <p class="members">Biscar, President Hades, LESTAT, B rian, Candyman, Ghost, VaeLith, Leeroy5.</p>
+      <p class="job">Swordshrine from 15:00; before that the whole team secures the Stables.</p>
+    </a>
+    <a class="team" href="https://marsmankingshot.github.io/gld-hive-2408/swordland_team_stables.html">
+      <h3>Stables team <span>5 players</span></h3>
+      <p class="lead">Lead Kronk Fil.</p>
+      <p class="members">Bahnie, Copascal, Tanaris, Vivek.</p>
+      <p class="job">The Stables at the bottom corner, contested either way.</p>
+    </a>
+    <a class="team" href="https://marsmankingshot.github.io/gld-hive-2408/swordland_team_corner_abbey.html">
+      <h3>Corner Abbey team <span>5 players</span></h3>
+      <p class="lead">Lead Xeno24.</p>
+      <p class="members">Stromy Knight, Sir Ranno, Uncle Ben, hijodeput 4.</p>
+      <p class="job">The Abbey at the far corner of our half.</p>
+    </a>
+    <a class="team" href="https://marsmankingshot.github.io/gld-hive-2408/swordland_team_sanctum.html">
+      <h3>Sanctum team <span>5 players</span></h3>
+      <p class="lead">Lead GoldYzma.</p>
+      <p class="members">Chyoz, Ironman, Darth Trashius, Palefox.</p>
+      <p class="job">Our Sanctum; posts the score at 20:00 and 45:00.</p>
+    </a>
+    <a class="team" href="https://marsmankingshot.github.io/gld-hive-2408/swordland_team_spawn_abbey.html">
+      <h3>Spawn Abbey team <span>5 players</span></h3>
+      <p class="lead">Lead Venom Goo.</p>
+      <p class="members">Urmel, Mohamed, Mauix, mad_hatter.</p>
+      <p class="job">The Abbey beside our spawn.</p>
+    </a>
+  </div>
+
+  <h2>Substitutes</h2>
+  <div class="subs">
+    <p>One pool for all teams, in this order for any empty seat: Bashful, Lothar, Elplandito, Ocram, Governor Ziggy, Ty_Mufasa, Eyeset2kill, DomGordo, Random Beast, durzo.</p>
+  </div>
+
+  <h2>The whole plan</h2>
+  <div class="plans">
+    <a class="plan blue" href="https://marsmankingshot.github.io/gld-hive-2408/swordland_blue.html">
+      <strong>If we are BLUE</strong><span>Our spawn on the left.</span>
+    </a>
+    <a class="plan red" href="https://marsmankingshot.github.io/gld-hive-2408/swordland_red.html">
+      <strong>If we are RED</strong><span>Our spawn on the right.</span>
+    </a>
+  </div>
+
+  <h2>Before the match</h2>
+  <ul>
+    <li>Answer the roll call in alliance chat.</li>
+    <li>Know your role and your garrison pair; both are on your team’s page.</li>
+    <li>Best defence hero in slot one if you are a joiner.</li>
+    <li>Your team chat is yours. Alliance chat is for the roll call, the score, a building lost and Plan B.</li>
+  </ul>
+</main>
+</body>
+</html>
