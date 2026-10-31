@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Swordland: SHRINE team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600;800&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef0f3; --surface:#ffffff; --ink:#1d2430; --muted:#5b6575;
+  --line:#d3d8e0; --gold:#a87a12; --gold-soft:#f6ecd2; --link:#1f4f8a;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#151a22; --surface:#1e2530; --ink:#e7eaf0; --muted:#9aa4b4;
+    --line:#323b49; --gold:#e0b14a; --gold-soft:#2c2618; --link:#8db8ec;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151a22; --surface:#1e2530; --ink:#e7eaf0; --muted:#9aa4b4;
+  --line:#323b49; --gold:#e0b14a; --gold-soft:#2c2618; --link:#8db8ec;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:1.0625rem/1.55 "Alegreya Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main{max-width:46rem; margin:0 auto; padding:2.5rem 1.25rem 3rem}
+h1,h2{font-family:Alegreya, Georgia, "Times New Roman", serif; line-height:1.15}
+h1{font-size:2.4rem; font-weight:800; margin:0 0 .75rem; border-bottom:3px solid var(--gold); padding-bottom:.5rem}
+h2{font-size:1.45rem; font-weight:600; margin:2.25rem 0 .9rem}
+p{margin:0 0 1rem}
+strong{font-weight:700}
+.note{background:var(--gold-soft); border-left:4px solid var(--gold); padding:.8rem 1rem; border-radius:0 6px 6px 0}
+
+.teams{display:grid; gap:.75rem}
+.team{
+  display:block; text-decoration:none; color:inherit;
+  background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--gold);
+  border-radius:8px; padding:.95rem 1.1rem;
+}
+.team:hover,.team:focus-visible{border-color:var(--gold)}
+.team:focus-visible,.plan:focus-visible{outline:3px solid var(--link); outline-offset:2px}
+.team h3{margin:0 0 .3rem; font-family:Alegreya, Georgia, serif; font-size:1.25rem; font-weight:800; color:var(--link)}
+.team h3 span{color:var(--muted); font:500 .9rem "Alegreya Sans", sans-serif; margin-left:.4rem}
+.lead{font-weight:700; margin:0 0 .15rem}
+.members{margin:0 0 .45rem}
+.job{margin:0; color:var(--muted); font-size:.95rem}
+
+.subs{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:.9rem 1.1rem}
+.subs p{margin:0}
+
+.plans{display:grid; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); gap:.75rem}
+.plan{
+  display:block; text-decoration:none; color:inherit; border-radius:8px; padding:1rem 1.1rem;
+  background:var(--surface); border:1px solid var(--line);
+}
+.plan strong{display:block; font-family:Alegreya, Georgia, serif; font-size:1.2rem; color:var(--link)}
+.plan.blue{border-top:5px solid #3a6fd0}
+.plan.red{border-top:5px solid #c4473a}
+.plan span{color:var(--muted)}
+
+ul{margin:0; padding-left:1.2rem}
+li{margin:.3rem 0}
+
+.role{background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--gold); border-radius:8px; padding:.9rem 1.1rem; margin-bottom:.75rem}
+.role.joiner{border-left-color:var(--line)}
+.role h3{margin:0; font-family:Alegreya, Georgia, serif; font-size:1.25rem; font-weight:800}
+.role h3 span{color:var(--muted); font:500 .95rem "Alegreya Sans", sans-serif; margin-left:.4rem}
+.where{color:var(--muted); font-size:.95rem; margin:.15rem 0 .55rem}
+.role ol{margin:0; padding-left:1.3rem}
+.role li{margin:.25rem 0}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse; width:100%; background:var(--surface); border:1px solid var(--line); border-radius:8px}
+td{padding:.6rem .8rem; border-top:1px solid var(--line); vertical-align:top}
+tr:first-child td{border-top:0}
+td:first-child{font-weight:700; white-space:nowrap; color:var(--gold)}
+.map{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:.9rem 1.1rem; margin-bottom:.75rem}
+.map p:last-child{margin:0}
+footer{margin-top:2rem; color:var(--muted); font-size:.95rem}
+a{color:var(--link)}
+</style>
+</head>
+<body>
+<main>
+<h1>SHRINE team</h1>
+<p>Your building is the <strong>Swordshrine</strong>, centre of the map. It opens at 15:00, scores 9,000 on capture and 1,800 a minute, and decides the match. Until 10:00 the whole team is at the Stables with the Stables team: joiners put a march in it, Dark Rad, President Hades and Leeroy5 burn the enemy cities next to it. Nobody leaves until Kronk Fil says the Stables is secure; after that the three help whichever home team asks. At 10:00 everyone pulls back to the Shrine.</p>
+<p class="note"><strong>Your team, your call.</strong> The goal is the building. The roles and priorities below are a starting point, not orders. If the lead sees a better way to hold it, change the plan. Nobody outside the team needs to be asked.</p>
+<p><strong>Formations.</strong> Into a building or a city: your garrison formation. Into a rally: your attack-joiner formation. Gathering: five troops. Discuss the details with your team.</p>
+
+<h2>Roles</h2>
+<section class="role"><h3>Dark Rad<span>Lead</span></h3><p class="where">Battlefield: at the Stables until 10:00, then one screen from the Shrine on our half, never beside a teammate</p><ol><li>Decide for the team. At 18:00: hold, or Plan B. Tell the alliance which</li><li>Until the Stables is secure: burn the enemy cities next to it, join Kronk Fil’s rallies. Then until 10:00: help whichever home team asks. From 15:00: rally enemy cities within one screen of the Shrine</li><li>Trains</li></ol></section>
+<section class="role"><h3>Biscar<span>Anchor</span></h3><p class="where">Battlefield: at the Stables until 10:00, then one screen from the Shrine on our half, never beside a teammate</p><ol><li>Main march in the Shrine from 15:00, defence lineup. Never teleport while it is in: teleporting pulls your troops out of it. Never hunt before 15:00</li><li>Reinforce President Hades</li><li>Trains</li></ol></section>
+<section class="role"><h3>President Hades<span>Striker</span></h3><p class="where">Battlefield: at the Stables until 10:00, then one screen from the Shrine on our half, never beside a teammate</p><ol><li>Rally only the cities Dark Rad names: until the Stables is secure the enemy cities next to it, then until 10:00 wherever a home team asks; from 15:00 cities within one screen of the Shrine. Never alone, never deep on their half, never a building</li><li>Reinforce Biscar</li><li>Trains</li></ol></section>
+<section class="role"><h3>Leeroy5<span>Looter</span></h3><p class="where">Battlefield: at the Stables until 10:00, then one screen from the Shrine on our half, never beside a teammate</p><ol><li>Until 10:00: join the rallies at the Stables, Kronk Fil’s and Dark Rad’s. From 15:00: every Baggage Train near the Shrine</li><li>Undercellars, five troops a node (five empties a node, losing five costs nothing)</li><li>Join Dark Rad’s rallies</li></ol></section>
+<section class="role joiner"><h3>VaeLith<span>Joiner</span></h3><p class="where">Safe zone, all hour</p><ol><li>0:00: one march into the Stables, speedups on (free, one comes back every minute). Pull it home at 10:00</li><li>Reinforce Biscar</li><li>From 15:00: reinforce the Shrine, speedups on, and join Dark Rad’s rallies</li></ol></section>
+<section class="role joiner"><h3>LESTAT<span>Joiner</span></h3><p class="where">Safe zone, all hour</p><ol><li>0:00: one march into the Stables, speedups on. Pull it home at 10:00</li><li>Reinforce Biscar</li><li>From 15:00: reinforce the Shrine, speedups on, and join Dark Rad’s rallies</li></ol></section>
+<section class="role joiner"><h3>Ghost<span>Joiner</span></h3><p class="where">Safe zone, all hour</p><ol><li>0:00: one march into the Stables, speedups on. Pull it home at 10:00</li><li>Reinforce Dark Rad</li><li>From 15:00: reinforce the Shrine, speedups on, and join Dark Rad’s rallies</li></ol></section>
+<section class="role joiner"><h3>B rian<span>Joiner</span></h3><p class="where">Safe zone, all hour</p><ol><li>0:00: one march into the Stables, speedups on. Pull it home at 10:00</li><li>Reinforce Dark Rad</li><li>From 15:00: reinforce the Shrine, speedups on, and join Dark Rad’s rallies</li></ol></section>
+<section class="role joiner"><h3>Candyman<span>Joiner</span></h3><p class="where">Safe zone, all hour</p><ol><li>0:00: one march into the Stables, speedups on. Pull it home at 10:00</li><li>Reinforce President Hades</li><li>From 15:00: reinforce the Shrine, speedups on, and join Dark Rad’s rallies</li></ol></section>
+
+<p><strong>Rally timer.</strong> A one-minute rally leaves before a march from the safe zone can arrive. With your joiners in the safe zone, call a longer rally. One minute only when the joiners are within one screen.</p>
+
+<h2>Where</h2>
+<div class="map"><p><strong>If we are BLUE</strong> (our spawn on the left): until 10:00 the team is at the <strong>Stables</strong>, bottom corner on their half, with the Stables team. Then one screen from the Shrine on the <strong>left</strong> half, spread out. Plan B target: <strong>their Sanctum</strong>, right half, toward the bottom. Option: their Corner Abbey, <strong>top</strong> corner, next to the Bell Tower.</p></div>
+<div class="map"><p><strong>If we are RED</strong> (our spawn on the right): until 10:00 the team is at the <strong>Stables</strong>, bottom corner on our half, with the Stables team; their Corner Abbey team is next door. Then one screen from the Shrine on the <strong>right</strong> half, spread out. Plan B target: <strong>their Sanctum</strong>, left half, toward the top. Option: their Corner Abbey, <strong>bottom</strong> corner, next to the Stables.</p></div>
+<p>Maps for both colours are in the whole plan: <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_blue.html">blue</a>, <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_red.html">red</a>.</p>
+
+<h2>Clock</h2>
+<div class="scroll"><table>
+<tr><td>0:00</td><td>Everyone to the Stables. Joiners: one march each into it, speedups on. Dark Rad, President Hades and Leeroy5 burn the enemy cities next to it and join Kronk Fil’s rallies. Biscar keeps the main march home.</td></tr>
+<tr><td>Stables secure</td><td>Kronk Fil says so. Dark Rad, President Hades and Leeroy5 help whichever home team asks. Joiners’ marches stay in the Stables.</td></tr>
+<tr><td>10:00</td><td>Everyone pulls back. Field four to one screen from the Shrine, our half; joiners pull their Stables march home, so every march is free at 15:00.</td></tr>
+<tr><td>15:00</td><td>Shrine opens. Biscar in. Joiners send their marches to the Shrine, speedups on.</td></tr>
+<tr><td>18:00</td><td>Dark Rad decides: hold, or Plan B. Tells the alliance. Not earlier: the first capture after 15:00 often changes hands. Not later: every minute is 1,800 for them.</td></tr>
+<tr><td>45:00</td><td>Dark Rad names the 50:00 target in alliance chat. If the Shrine is full, spare marches take the Hall next to it.</td></tr>
+<tr><td>50:00</td><td>A flip after 57:00 cannot be undone and drops half the bank as trains. Behind: President Hades and Dark Rad rally the named building, ten seconds apart. Ahead: nobody moves.</td></tr>
+</table></div>
+
+<h2>If</h2>
+<ul>
+<li><strong>Shrine lost:</strong> Leeroy5 on the trains. President Hades burns the enemy city standing next to it. Biscar goes back in.</li>
+<li><strong>Lost twice:</strong> Plan B. The team goes for their Sanctum: hold it as long as it lasts, Leeroy5 on the trains every time it flips, back in when their anchor leaves. Option, Dark Rad’s call: split, joiners and President Hades on their Sanctum, Dark Rad and Leeroy5 with Xeno24’s team on their Corner Abbey. Nobody else moves.</li>
+<li><strong>Biscar burned:</strong> President Hades’s main march goes into the Shrine until Biscar is back. Burned means twelve minutes in spawn and the march leaves the building.</li>
+<li><strong>Rally coming:</strong> every free march into the building, speedups on; the garrison shrinks with every hit and a fresh march fills it back up. Nobody leaves it to counter-attack.</li>
+</ul>
+
+<footer>Whole plan: <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_blue.html">blue</a>, <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_red.html">red</a>. Teams: <a href="https://gldgoldie.github.io/Swordland-Legion-1/">index</a>.</footer>
+</main>
+</body>
+</html>
