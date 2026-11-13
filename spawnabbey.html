@@ -1,169 +1,134 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
-<title>Swordland: SPAWN ABBEY team</title><style>
-:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--ink:#222;--mut:#555;--line:#ddd;--acc:#1f6fd0;--red:#d03a2f;--gold:#b58000;--bg:#fff}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.4 Helvetica,Arial,sans-serif}
-.page{max-width:820px;margin:0 auto;padding:12px 16px 32px}
-h1{font-size:26px;margin:8px 0 6px;color:var(--gold)}
-h2{font-size:19px;margin:20px 0 6px;border-bottom:2px solid var(--gold);padding-bottom:2px}
-h2.blue{color:var(--acc);border-color:var(--acc)}h2.red{color:var(--red);border-color:var(--red)}
-p{margin:6px 0}
-table{width:100%;border-collapse:collapse;margin:6px 0;font-size:16px}th,td{border:1px solid var(--line);padding:6px 7px;text-align:left;vertical-align:top}th{background:#f3f3f3}
-td.n{font-weight:700;white-space:nowrap}td.r{color:var(--mut);white-space:nowrap}
-ul{margin:4px 0 4px 20px;padding:0}li{margin:5px 0}
-.box{border:2px solid var(--gold);border-radius:8px;padding:8px 12px;margin:8px 0;font-size:17px}
-.box.blue{border-color:var(--acc)}.box.red{border-color:var(--red)}
-.people{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:8px 0}@media(max-width:560px){.people{grid-template-columns:1fr}}
-.who{border:1px solid var(--line);border-radius:8px;padding:6px 10px}.who b{font-size:18px}.who span{color:var(--mut);margin-left:6px}
-.pr{margin:3px 0}.pr b{color:var(--gold);margin-right:4px}
-.loc{font-size:14px;color:var(--mut);margin:2px 0 4px}
-.warn{border:2px solid var(--red);border-radius:8px;padding:8px 12px;margin:10px 0}
-.free{border-left:6px solid var(--gold);background:#fff8e6;padding:8px 12px;margin:10px 0;font-size:17px}
-.foot{color:var(--mut);font-size:14px;margin-top:20px}a{color:var(--acc)}
-@media print{body{font-size:12px}.page{padding:0}svg{max-height:360px}@page{size:A4;margin:10mm}}
-</style></head><body><div class="page">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Swordland: SPAWN ABBEY team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600;800&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef0f3; --surface:#ffffff; --ink:#1d2430; --muted:#5b6575;
+  --line:#d3d8e0; --gold:#a87a12; --gold-soft:#f6ecd2; --link:#1f4f8a;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#151a22; --surface:#1e2530; --ink:#e7eaf0; --muted:#9aa4b4;
+    --line:#323b49; --gold:#e0b14a; --gold-soft:#2c2618; --link:#8db8ec;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151a22; --surface:#1e2530; --ink:#e7eaf0; --muted:#9aa4b4;
+  --line:#323b49; --gold:#e0b14a; --gold-soft:#2c2618; --link:#8db8ec;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:1.0625rem/1.55 "Alegreya Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main{max-width:46rem; margin:0 auto; padding:2.5rem 1.25rem 3rem}
+h1,h2{font-family:Alegreya, Georgia, "Times New Roman", serif; line-height:1.15}
+h1{font-size:2.4rem; font-weight:800; margin:0 0 .75rem; border-bottom:3px solid var(--gold); padding-bottom:.5rem}
+h2{font-size:1.45rem; font-weight:600; margin:2.25rem 0 .9rem}
+p{margin:0 0 1rem}
+strong{font-weight:700}
+.note{background:var(--gold-soft); border-left:4px solid var(--gold); padding:.8rem 1rem; border-radius:0 6px 6px 0}
+
+.teams{display:grid; gap:.75rem}
+.team{
+  display:block; text-decoration:none; color:inherit;
+  background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--gold);
+  border-radius:8px; padding:.95rem 1.1rem;
+}
+.team:hover,.team:focus-visible{border-color:var(--gold)}
+.team:focus-visible,.plan:focus-visible{outline:3px solid var(--link); outline-offset:2px}
+.team h3{margin:0 0 .3rem; font-family:Alegreya, Georgia, serif; font-size:1.25rem; font-weight:800; color:var(--link)}
+.team h3 span{color:var(--muted); font:500 .9rem "Alegreya Sans", sans-serif; margin-left:.4rem}
+.lead{font-weight:700; margin:0 0 .15rem}
+.members{margin:0 0 .45rem}
+.job{margin:0; color:var(--muted); font-size:.95rem}
+
+.subs{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:.9rem 1.1rem}
+.subs p{margin:0}
+
+.plans{display:grid; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); gap:.75rem}
+.plan{
+  display:block; text-decoration:none; color:inherit; border-radius:8px; padding:1rem 1.1rem;
+  background:var(--surface); border:1px solid var(--line);
+}
+.plan strong{display:block; font-family:Alegreya, Georgia, serif; font-size:1.2rem; color:var(--link)}
+.plan.blue{border-top:5px solid #3a6fd0}
+.plan.red{border-top:5px solid #c4473a}
+.plan span{color:var(--muted)}
+
+ul{margin:0; padding-left:1.2rem}
+li{margin:.3rem 0}
+
+.role{background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--gold); border-radius:8px; padding:.9rem 1.1rem; margin-bottom:.75rem}
+.role.joiner{border-left-color:var(--line)}
+.role h3{margin:0; font-family:Alegreya, Georgia, serif; font-size:1.25rem; font-weight:800}
+.role h3 span{color:var(--muted); font:500 .95rem "Alegreya Sans", sans-serif; margin-left:.4rem}
+.where{color:var(--muted); font-size:.95rem; margin:.15rem 0 .55rem}
+.role ol{margin:0; padding-left:1.3rem}
+.role li{margin:.25rem 0}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse; width:100%; background:var(--surface); border:1px solid var(--line); border-radius:8px}
+td{padding:.6rem .8rem; border-top:1px solid var(--line); vertical-align:top}
+tr:first-child td{border-top:0}
+td:first-child{font-weight:700; white-space:nowrap; color:var(--gold)}
+.map{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:.9rem 1.1rem; margin-bottom:.75rem}
+.map p:last-child{margin:0}
+footer{margin-top:2rem; color:var(--muted); font-size:.95rem}
+a{color:var(--link)}
+</style>
+</head>
+<body>
+<main>
 <h1>SPAWN ABBEY team</h1>
-<p>Your building is the <b>Abbey beside our spawn</b>, not the one at the far corner. 3,000 on capture, 600 a minute. Capture at 0:00 and hold for the hour.</p>
-<div class="free"><b>Your team, your call.</b> The goal is the building. The roles and priorities below are a starting point, not orders. If the lead sees a better way to hold it, change the plan. Nobody outside the team needs to be asked.<br><br><b>Formations.</b> Into a building or a city: your garrison formation. Into a rally: your attack-joiner formation. Gathering: five troops. Discuss the details with your team.</div>
-<div class="people">
-<div class="who"><b>Bahaa</b> <span>Lead, anchor</span><div class="loc">Battlefield: One screen from the Spawn Abbey toward our spawn, never beside a teammate</div><div class="pr"><b>Priority 1</b> Main march in the Abbey from 0:00, defence lineup. Never teleport while it is in: teleporting pulls your troops out of it</div><div class="pr"><b>Priority 2</b> Decide for the team</div><div class="pr"><b>Priority 3</b> Trains</div></div>
-<div class="who"><b>YJYJ222</b> <span>Looter</span><div class="loc">Battlefield: One screen from the Spawn Abbey toward our spawn, never beside a teammate</div><div class="pr"><b>Priority 1</b> Every Baggage Train near the Abbey (half the points of a flipped building, for whoever picks them up)</div><div class="pr"><b>Priority 2</b> Undercellars next to the Abbey, five troops a node (five empties a node, losing five costs nothing)</div><div class="pr"><b>Priority 3</b> Trains</div></div>
-<div class="who"><b>Urmel</b> <span>Striker</span><div class="loc">Battlefield: One screen from the Spawn Abbey toward our spawn, never beside a teammate</div><div class="pr"><b>Priority 1</b> Rally enemy cities standing within one screen of the Abbey. Stay one screen from the Abbey</div><div class="pr"><b>Priority 2</b> Reinforce Bahaa</div><div class="pr"><b>Priority 3</b> Trains</div></div>
-<div class="who"><b>Mohammed</b> <span>Joiner</span><div class="loc">Safe zone, all hour</div><div class="pr"><b>Priority 1</b> Reinforce Bahaa</div><div class="pr"><b>Priority 2</b> Reinforce the Abbey, speedups on (free, one comes back every minute)</div><div class="pr"><b>Priority 3</b> Undercellars next to the Abbey, five troops a node</div></div>
-<div class="who"><b>Fairytale</b> <span>Joiner</span><div class="loc">Safe zone, all hour</div><div class="pr"><b>Priority 1</b> Reinforce Bahaa</div><div class="pr"><b>Priority 2</b> Reinforce the Abbey, speedups on</div><div class="pr"><b>Priority 3</b> Undercellars next to the Abbey, five troops a node</div></div>
-</div>
-<div class="warn"><b>Rally timer.</b> A one-minute rally leaves before a march from the safe zone can arrive. With your joiners in the safe zone, call a longer rally. One minute only when the joiners are within one screen.</div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" font-family="Helvetica, Arial, sans-serif" style="width:100%;height:auto;display:block">
-<text x="400.0" y="40" font-size="30" font-weight="700" text-anchor="middle" fill="#1f6fd0">We are BLUE: our spawn on the LEFT</text>
-<polygon points="410,55 795,385 410,735 25,385" fill="#f1e3c8" stroke="#8a6d3b" stroke-width="3"></polygon>
-<polygon points="410,55 410,735 25,385" fill="#dbe8fb" opacity="0.8"></polygon>
-<line x1="410" y1="55" x2="410" y2="735" stroke="#8a6d3b" stroke-width="2" stroke-dasharray="8,6"></line>
-<polygon points="85,345 125,385 85,425 45,385" fill="#1f6fd0" opacity="0.35" stroke="#1f6fd0" stroke-width="4"></polygon>
-<text x="85" y="383" font-size="15" font-weight="700" text-anchor="middle" fill="#1f6fd0">OUR</text>
-<text x="85" y="401" font-size="15" font-weight="700" text-anchor="middle" fill="#1f6fd0">SPAWN</text>
-<polygon points="735,345 775,385 735,425 695,385" fill="#d03a2f" opacity="0.35" stroke="#d03a2f" stroke-width="4"></polygon>
-<text x="735" y="383" font-size="15" font-weight="700" text-anchor="middle" fill="#d03a2f">enemy</text>
-<text x="735" y="401" font-size="15" font-weight="700" text-anchor="middle" fill="#d03a2f">spawn</text>
-<circle cx="410" cy="405" r="36" fill="white" stroke="#6b4e16" stroke-width="5"></circle>
-<text x="410" y="410" font-size="16" font-weight="700" text-anchor="middle" fill="#6b4e16">Shrine</text>
-<text x="410" y="460" font-size="17" font-weight="800" text-anchor="middle" fill="#6b4e16">SHRINE team</text>
-<text x="410" y="478" font-size="13" text-anchor="middle" fill="#555">opens 15:00</text>
-<circle cx="227" cy="349" r="36" fill="white" stroke="#1f6fd0" stroke-width="5"></circle>
-<text x="227" y="354" font-size="15" font-weight="700" text-anchor="middle" fill="#1f6fd0">Sanctum</text>
-<text x="227" y="404" font-size="17" font-weight="800" text-anchor="middle" fill="#1f6fd0">SANCTUM team</text>
-<circle cx="198" cy="449" r="28" fill="white" stroke="#1f6fd0" stroke-width="5"></circle>
-<text x="198" y="454" font-size="14" font-weight="700" text-anchor="middle" fill="#1f6fd0">Abbey</text>
-<text x="198" y="496" font-size="17" font-weight="800" text-anchor="middle" fill="#1f6fd0">SPAWN ABBEY team</text>
-<circle cx="308" cy="638" r="28" fill="white" stroke="#1f6fd0" stroke-width="5"></circle>
-<text x="308" y="643" font-size="14" font-weight="700" text-anchor="middle" fill="#1f6fd0">Abbey</text>
-<text x="308" y="685" font-size="17" font-weight="800" text-anchor="middle" fill="#1f6fd0">CORNER ABBEY team</text>
-<circle cx="506" cy="638" r="28" fill="white" stroke="#1f6fd0" stroke-width="5"></circle>
-<text x="506" y="643" font-size="13" font-weight="700" text-anchor="middle" fill="#1f6fd0">Stables</text>
-<text x="506" y="685" font-size="17" font-weight="800" text-anchor="middle" fill="#1f6fd0">STABLES team</text>
-<text x="506" y="703" font-size="13" text-anchor="middle" fill="#555">on the right half, we take it anyway; SHRINE team here until 10:00</text>
-<circle cx="306" cy="161" r="28" fill="white" stroke="#1f6fd0" stroke-width="5"></circle>
-<text x="306" y="166" font-size="13" font-weight="700" text-anchor="middle" fill="#1f6fd0">Bell</text>
-<text x="306" y="208" font-size="17" font-weight="800" text-anchor="middle" fill="#1f6fd0">ours, 45:00 extra</text>
-<text x="306" y="226" font-size="13" text-anchor="middle" fill="#555">capture time halved</text>
-<circle cx="593" cy="471" r="36" fill="white" stroke="#d03a2f" stroke-width="2"></circle>
-<text x="593" y="476" font-size="15" font-weight="700" text-anchor="middle" fill="#d03a2f">Sanctum</text>
-<text x="593" y="526" font-size="13" text-anchor="middle" fill="#555">enemy, Plan B target</text>
-<circle cx="630" cy="363" r="28" fill="white" stroke="#d03a2f" stroke-width="2"></circle>
-<text x="630" y="368" font-size="14" font-weight="700" text-anchor="middle" fill="#d03a2f">Abbey</text>
-<text x="630" y="410" font-size="13" text-anchor="middle" fill="#555">enemy</text>
-<circle cx="508" cy="161" r="28" fill="white" stroke="#d03a2f" stroke-width="2"></circle>
-<text x="508" y="166" font-size="14" font-weight="700" text-anchor="middle" fill="#d03a2f">Abbey</text>
-<text x="508" y="208" font-size="13" text-anchor="middle" fill="#555">enemy, Plan B option</text>
-<circle cx="407" cy="236" r="20" fill="white" stroke="#6b4e16" stroke-width="2"></circle>
-<text x="407" y="241" font-size="14" font-weight="700" text-anchor="middle" fill="#6b4e16">Merc</text>
-<text x="407" y="275" font-size="13" text-anchor="middle" fill="#555">Camp, opens 15:00, after 45:00 only</text>
-<circle cx="407" cy="556" r="20" fill="white" stroke="#6b4e16" stroke-width="2"></circle>
-<text x="407" y="561" font-size="14" font-weight="700" text-anchor="middle" fill="#6b4e16">Hall</text>
-<text x="407" y="595" font-size="13" text-anchor="middle" fill="#555">Reformation, opens 15:00, after 45:00 only</text>
-<polygon points="245,245 258,258 245,271 232,258" fill="#b58b2e"></polygon>
-<text x="245" y="262" font-size="11" font-weight="700" text-anchor="middle" fill="#fff">U</text>
-<text x="245" y="284" font-size="11" font-weight="700" text-anchor="middle" fill="#1f6fd0">Sanctum team gathers</text>
-<polygon points="285,519 298,532 285,545 272,532" fill="#b58b2e"></polygon>
-<text x="285" y="536" font-size="11" font-weight="700" text-anchor="middle" fill="#fff">U</text>
-<text x="285" y="558" font-size="11" font-weight="700" text-anchor="middle" fill="#1f6fd0">Spawn Abbey team gathers</text>
-<polygon points="575,237 588,250 575,263 562,250" fill="#ccc"></polygon>
-<text x="575" y="254" font-size="11" font-weight="700" text-anchor="middle" fill="#fff">U</text>
-<polygon points="505,529 518,542 505,555 492,542" fill="#ccc"></polygon>
-<text x="505" y="546" font-size="11" font-weight="700" text-anchor="middle" fill="#fff">U</text>
-<circle cx="198" cy="449" r="41" fill="none" stroke="#e0a800" stroke-width="7"></circle><text x="400.0" y="756" font-size="14" text-anchor="middle" fill="#555">Our side is the left half, shaded. Thick ring: ours, with the team that holds it.</text>
-<text x="400.0" y="776" font-size="14" text-anchor="middle" fill="#555">Thin ring: enemy, nobody touches it before 45:00. U: Undercellars, ours in gold.</text>
-<text x="400.0" y="796" font-size="14" text-anchor="middle" fill="#555">Park one screen from your building, toward our spawn. Never beside the building, never beside a teammate.</text>
-</svg>
-<div class="box blue">Your Abbey is the one <b>beside our spawn</b>, left half. Everything not in the Abbey gathers the Undercellars next to it. The Bell Tower at the top corner: 45:00 extra only, if the Abbey is full.</div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" font-family="Helvetica, Arial, sans-serif" style="width:100%;height:auto;display:block">
-<text x="400.0" y="40" font-size="30" font-weight="700" text-anchor="middle" fill="#d03a2f">We are RED: our spawn on the RIGHT</text>
-<polygon points="410,55 795,385 410,735 25,385" fill="#f1e3c8" stroke="#8a6d3b" stroke-width="3"></polygon>
-<polygon points="410,55 795,385 410,735" fill="#fbdedb" opacity="0.8"></polygon>
-<line x1="410" y1="55" x2="410" y2="735" stroke="#8a6d3b" stroke-width="2" stroke-dasharray="8,6"></line>
-<polygon points="85,345 125,385 85,425 45,385" fill="#1f6fd0" opacity="0.35" stroke="#1f6fd0" stroke-width="4"></polygon>
-<text x="85" y="383" font-size="15" font-weight="700" text-anchor="middle" fill="#1f6fd0">enemy</text>
-<text x="85" y="401" font-size="15" font-weight="700" text-anchor="middle" fill="#1f6fd0">spawn</text>
-<polygon points="735,345 775,385 735,425 695,385" fill="#d03a2f" opacity="0.35" stroke="#d03a2f" stroke-width="4"></polygon>
-<text x="735" y="383" font-size="15" font-weight="700" text-anchor="middle" fill="#d03a2f">OUR</text>
-<text x="735" y="401" font-size="15" font-weight="700" text-anchor="middle" fill="#d03a2f">SPAWN</text>
-<circle cx="410" cy="405" r="36" fill="white" stroke="#6b4e16" stroke-width="5"></circle>
-<text x="410" y="410" font-size="16" font-weight="700" text-anchor="middle" fill="#6b4e16">Shrine</text>
-<text x="410" y="460" font-size="17" font-weight="800" text-anchor="middle" fill="#6b4e16">SHRINE team</text>
-<text x="410" y="478" font-size="13" text-anchor="middle" fill="#555">opens 15:00</text>
-<circle cx="593" cy="471" r="36" fill="white" stroke="#d03a2f" stroke-width="5"></circle>
-<text x="593" y="476" font-size="15" font-weight="700" text-anchor="middle" fill="#d03a2f">Sanctum</text>
-<text x="593" y="526" font-size="17" font-weight="800" text-anchor="middle" fill="#d03a2f">SANCTUM team</text>
-<circle cx="630" cy="363" r="28" fill="white" stroke="#d03a2f" stroke-width="5"></circle>
-<text x="630" y="368" font-size="14" font-weight="700" text-anchor="middle" fill="#d03a2f">Abbey</text>
-<text x="630" y="325" font-size="17" font-weight="800" text-anchor="middle" fill="#d03a2f">SPAWN ABBEY team</text>
-<circle cx="508" cy="161" r="28" fill="white" stroke="#d03a2f" stroke-width="5"></circle>
-<text x="508" y="166" font-size="14" font-weight="700" text-anchor="middle" fill="#d03a2f">Abbey</text>
-<text x="508" y="208" font-size="17" font-weight="800" text-anchor="middle" fill="#d03a2f">CORNER ABBEY team</text>
-<circle cx="506" cy="638" r="28" fill="white" stroke="#d03a2f" stroke-width="5"></circle>
-<text x="506" y="643" font-size="13" font-weight="700" text-anchor="middle" fill="#d03a2f">Stables</text>
-<text x="506" y="685" font-size="17" font-weight="800" text-anchor="middle" fill="#d03a2f">STABLES team</text>
-<text x="506" y="703" font-size="13" text-anchor="middle" fill="#555">teleport cooldown halved; SHRINE team here until 10:00</text>
-<circle cx="306" cy="161" r="28" fill="white" stroke="#1f6fd0" stroke-width="2"></circle>
-<text x="306" y="166" font-size="13" font-weight="700" text-anchor="middle" fill="#1f6fd0">Bell</text>
-<text x="306" y="124" font-size="13" text-anchor="middle" fill="#555">enemy buff, ours at 45:00</text>
-<circle cx="227" cy="349" r="36" fill="white" stroke="#1f6fd0" stroke-width="2"></circle>
-<text x="227" y="354" font-size="15" font-weight="700" text-anchor="middle" fill="#1f6fd0">Sanctum</text>
-<text x="227" y="404" font-size="13" text-anchor="middle" fill="#555">enemy, Plan B target</text>
-<circle cx="198" cy="449" r="28" fill="white" stroke="#1f6fd0" stroke-width="2"></circle>
-<text x="198" y="454" font-size="14" font-weight="700" text-anchor="middle" fill="#1f6fd0">Abbey</text>
-<text x="198" y="496" font-size="13" text-anchor="middle" fill="#555">enemy</text>
-<circle cx="308" cy="638" r="28" fill="white" stroke="#1f6fd0" stroke-width="2"></circle>
-<text x="308" y="643" font-size="14" font-weight="700" text-anchor="middle" fill="#1f6fd0">Abbey</text>
-<text x="308" y="685" font-size="13" text-anchor="middle" fill="#555">enemy, Plan B option</text>
-<circle cx="407" cy="236" r="20" fill="white" stroke="#6b4e16" stroke-width="2"></circle>
-<text x="407" y="241" font-size="14" font-weight="700" text-anchor="middle" fill="#6b4e16">Merc</text>
-<text x="407" y="275" font-size="13" text-anchor="middle" fill="#555">Camp, opens 15:00, after 45:00 only</text>
-<circle cx="407" cy="556" r="20" fill="white" stroke="#6b4e16" stroke-width="2"></circle>
-<text x="407" y="561" font-size="14" font-weight="700" text-anchor="middle" fill="#6b4e16">Hall</text>
-<text x="407" y="595" font-size="13" text-anchor="middle" fill="#555">Reformation, opens 15:00, after 45:00 only</text>
-<polygon points="245,245 258,258 245,271 232,258" fill="#ccc"></polygon>
-<text x="245" y="262" font-size="11" font-weight="700" text-anchor="middle" fill="#fff">U</text>
-<polygon points="285,519 298,532 285,545 272,532" fill="#ccc"></polygon>
-<text x="285" y="536" font-size="11" font-weight="700" text-anchor="middle" fill="#fff">U</text>
-<polygon points="575,237 588,250 575,263 562,250" fill="#b58b2e"></polygon>
-<text x="575" y="254" font-size="11" font-weight="700" text-anchor="middle" fill="#fff">U</text>
-<text x="575" y="276" font-size="11" font-weight="700" text-anchor="middle" fill="#d03a2f">Spawn Abbey team gathers</text>
-<polygon points="505,529 518,542 505,555 492,542" fill="#b58b2e"></polygon>
-<text x="505" y="546" font-size="11" font-weight="700" text-anchor="middle" fill="#fff">U</text>
-<text x="505" y="568" font-size="11" font-weight="700" text-anchor="middle" fill="#d03a2f">Sanctum team gathers</text>
-<circle cx="630" cy="363" r="41" fill="none" stroke="#e0a800" stroke-width="7"></circle><text x="400.0" y="756" font-size="14" text-anchor="middle" fill="#555">Our side is the right half, shaded. Thick ring: ours, with the team that holds it.</text>
-<text x="400.0" y="776" font-size="14" text-anchor="middle" fill="#555">Thin ring: enemy, nobody touches it before 45:00. U: Undercellars, ours in gold.</text>
-<text x="400.0" y="796" font-size="14" text-anchor="middle" fill="#555">Park one screen from your building, toward our spawn. Never beside the building, never beside a teammate.</text>
-</svg>
-<div class="box red">Your Abbey is the one <b>beside our spawn</b>, right half. Everything not in the Abbey gathers the Undercellars next to it.</div>
-<h2>Clock</h2><table>
-<tbody><tr><td class="n">0:00</td><td>Bahaa in. Mohammed and Fairytale reinforce Bahaa, then the Abbey.</td></tr>
-<tr><td class="n">3:00</td><td>Hold. Urmel rallies any enemy city standing within one screen of the Abbey. Once the Stables is secure, Bahaa asks the Shrine team for help if an enemy city sits next to the Abbey.</td></tr>
-<tr><td class="n">15:00</td><td>Undercellars appear: this team sends first to the cluster next to the Abbey, five troops a node.</td></tr>
-<tr><td class="n">45:00</td><td>Blue only: if the Abbey is full, YJYJ222 takes the Bell Tower at the top corner with spare marches. Red: nothing.</td></tr>
-<tr><td class="n">50:00</td><td>A flip after 57:00 cannot be undone and drops half the bank as trains. Behind: Urmel joins the burst rallies the Shrine lead names. Bahaa stays in. Ahead: nobody moves.</td></tr>
-</tbody></table>
-<h2>If</h2><ul><li><b>Abbey lost:</b> YJYJ222 on the trains. Urmel burns the enemy city standing next to it. Bahaa goes back in.</li><li><b>Lost twice:</b> tell the alliance. Stay parked one screen away and go back in the moment their garrison leaves. Never pull a march out of another building for it: two buildings lost is the match.</li><li><b>Bahaa burned:</b> Urmel's main march goes into the Abbey until Bahaa is back. Burned means twelve minutes in spawn and the march leaves the building.</li><li><b>Rally coming:</b> every free march into the building, speedups on; the garrison shrinks with every hit and a fresh march fills it back up. Nobody leaves it to counter-attack.</li></ul>
-<p class="foot">Gold ring: your building. Dashed ring: second job, extra or Plan B. Whole plan: <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_blue.html">blue</a>, <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_red.html">red</a>. Teams: <a href="index.html">index</a>.</p>
-<script>document.addEventListener('DOMContentLoaded',function(){var t=Date.now();document.querySelectorAll('p.foot a').forEach(function(a){a.href=a.getAttribute('href').split('?')[0]+'?t='+t;});});</script>
-</div></body></html>
+<p>Your building is the <strong>Abbey beside our spawn</strong>, not the one at the far corner. 3,000 on capture, 600 a minute. Capture at 0:00 and hold for the hour.</p>
+<p class="note"><strong>Your team, your call.</strong> The goal is the building. The roles and priorities below are a starting point, not orders. If the lead sees a better way to hold it, change the plan. Nobody outside the team needs to be asked.</p>
+<p><strong>Formations.</strong> Into a building or a city: your garrison formation. Into a rally: your attack-joiner formation. Gathering: five troops. Discuss the details with your team.</p>
+
+<h2>Roles</h2>
+<section class="role"><h3>Urmel<span>Lead, looter</span></h3><p class="where">Battlefield: one screen from the Spawn Abbey toward our spawn, never beside a teammate</p><ol><li>Decide for the team. Every Baggage Train near the Abbey (half the points of a flipped building, for whoever picks them up)</li><li>Undercellars next to the Abbey, five troops a node (five empties a node, losing five costs nothing)</li><li>Trains</li></ol></section>
+<section class="role"><h3>Mohamed<span>Anchor</span></h3><p class="where">Battlefield: one screen from the Spawn Abbey toward our spawn, never beside a teammate</p><ol><li>Main march in the Abbey from 0:00, defence lineup. Never teleport while it is in: teleporting pulls your troops out of it</li><li>Reinforce Donald Duckstin</li><li>Trains</li></ol></section>
+<section class="role"><h3>Donald Duckstin<span>Striker</span></h3><p class="where">Battlefield: one screen from the Spawn Abbey toward our spawn, never beside a teammate</p><ol><li>Rally enemy cities standing within one screen of the Abbey. Stay one screen from the Abbey</li><li>Reinforce Mohamed</li><li>Trains</li></ol></section>
+<section class="role joiner"><h3>YJYJ222<span>Joiner</span></h3><p class="where">Safe zone, all hour</p><ol><li>Reinforce Mohamed</li><li>Reinforce the Abbey, speedups on (free, one comes back every minute)</li><li>Undercellars next to the Abbey, five troops a node</li></ol></section>
+<section class="role joiner"><h3>Fairytale<span>Joiner</span></h3><p class="where">Safe zone, all hour</p><ol><li>Reinforce Mohamed</li><li>Reinforce the Abbey, speedups on</li><li>Undercellars next to the Abbey, five troops a node</li></ol></section>
+
+<p><strong>Rally timer.</strong> A one-minute rally leaves before a march from the safe zone can arrive. With your joiners in the safe zone, call a longer rally. One minute only when the joiners are within one screen.</p>
+
+<h2>Where</h2>
+<div class="map"><p><strong>If we are BLUE</strong> (our spawn on the left): your Abbey is the one <strong>beside our spawn</strong>, left half. Everything not in the Abbey gathers the Undercellars next to it. The Bell Tower at the top corner: 45:00 extra only, if the Abbey is full.</p></div>
+<div class="map"><p><strong>If we are RED</strong> (our spawn on the right): your Abbey is the one <strong>beside our spawn</strong>, right half. Everything not in the Abbey gathers the Undercellars next to it.</p></div>
+<p>Maps for both colours are in the whole plan: <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_blue.html">blue</a>, <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_red.html">red</a>.</p>
+
+<h2>Clock</h2>
+<div class="scroll"><table>
+<tr><td>0:00</td><td>Mohamed in. YJYJ222 and Fairytale reinforce Mohamed, then the Abbey.</td></tr>
+<tr><td>3:00</td><td>Hold. Donald Duckstin rallies any enemy city standing within one screen of the Abbey. Once the Stables is secure, Urmel asks the Shrine team for help if an enemy city sits next to the Abbey.</td></tr>
+<tr><td>15:00</td><td>Undercellars appear: this team sends first to the cluster next to the Abbey, five troops a node.</td></tr>
+<tr><td>45:00</td><td>Blue only: if the Abbey is full, Urmel takes the Bell Tower at the top corner with spare marches. Red: nothing.</td></tr>
+<tr><td>50:00</td><td>A flip after 57:00 cannot be undone and drops half the bank as trains. Behind: Donald Duckstin joins the burst rallies the Shrine lead names. Mohamed stays in. Ahead: nobody moves.</td></tr>
+</table></div>
+
+<h2>If</h2>
+<ul>
+<li><strong>Abbey lost:</strong> Urmel on the trains. Donald Duckstin burns the enemy city standing next to it. Mohamed goes back in.</li>
+<li><strong>Lost twice:</strong> tell the alliance. Stay parked one screen away and go back in the moment their garrison leaves. Never pull a march out of another building for it: two buildings lost is the match.</li>
+<li><strong>Mohamed burned:</strong> Donald Duckstin’s main march goes into the Abbey until Mohamed is back. Burned means twelve minutes in spawn and the march leaves the building.</li>
+<li><strong>Rally coming:</strong> every free march into the building, speedups on; the garrison shrinks with every hit and a fresh march fills it back up. Nobody leaves it to counter-attack.</li>
+</ul>
+
+<footer>Whole plan: <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_blue.html">blue</a>, <a href="https://marsmankingshot.github.io/gld-hive-2408/swordland_red.html">red</a>. Teams: <a href="https://gldgoldie.github.io/Swordland-Legion-1/">index</a>.</footer>
+</main>
+</body>
+</html>
